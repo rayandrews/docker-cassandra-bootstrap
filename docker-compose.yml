@@ -5,11 +5,11 @@ services:
     build: cassandra
     env_file:
       - cassandra/cassandra.env
-   ports:
+    ports:
     #  - "7199:7199" # JMX
-     - "7000:7000" # cluster communication
-     - "7001:7001" # cluster communication (SSL)
-     - "9042:9042" # native protocol clients
+      - "7000:7000" # cluster communication
+      - "7001:7001" # cluster communication (SSL)
+      - "9042:9042" # native protocol clients
     #  - "9160:9160" # thrift clients
     volumes:
       - ./cassandra/config/collectd.cassandra.conf:/etc/collectd/collectd.conf
